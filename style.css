@@ -1,0 +1,340 @@
+html, body, section
+{
+    position: relative;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+  margin:auto;
+}
+
+nav ul
+{
+    list-style-type: none;
+    background: transparent;
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+ 
+nav li
+{
+    float: left;
+    margin-left: 20px;
+}
+ 
+nav ul li a
+{
+    display: block;
+    padding: 15px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+nav ul li a:hover
+{
+    background-image: linear-gradient(205deg, purple, blue);
+    transition-duration: 0.5s;
+    border-radius: 20px;
+}
+ 
+section
+{
+    padding: 80px;
+}
+    
+.home {
+  margin: auto;
+}
+
+.content {
+    color: whitesmoke;
+    margin-top: 200px;
+}
+
+.content h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  width: 30em;
+  animation: keyframes 5s steps(500) infinite;
+}
+
+@keyframes keyframes{
+ 
+  from{ width: 0px;}
+ 
+} 
+
+.about {
+  width: 100%;
+  padding: 30px 0px;
+  /* background-color: #333; */
+  margin: auto;
+  margin-bottom: 25%;
+}
+
+.commands {
+  height: 100%;
+  width: 100%;
+  background-image: url(img/bitgif.gif); 
+  background-size: cover;
+  background-position: center;
+
+}
+
+.about-me {
+  width: 1130px;
+  max-width: 95%;
+  margin:  0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.flip-card {
+  border-radius: 10px;
+  background-color: transparent;
+  width: 250px;
+  height: 250px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10px;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  border-radius: 10px;
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {  
+  border-radius: 10px;
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  border-radius: 10px;
+  background-image: linear-gradient(135deg, blue, purple);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.about-me img{
+  height: auto;
+  width: 250px;
+  border-radius: 10px;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+}
+
+.about-me img:hover{
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+.about-text {
+  width: 550px;
+}
+
+.about-text h2 {
+  color: whitesmoke;
+  font-size: 50px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  border-bottom: 1px solid red;
+}
+
+.about-text h5{
+  color: whitesmoke;
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-bottom: 25px;
+  text-transform: capitalize;
+}
+
+.about-text p{
+  color: whitesmoke;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 15px;
+  margin-bottom: 45px;
+  text-align: justify;
+}
+
+.project {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  list-style-type: none;
+  overflow: hidden;
+  padding-bottom: 20%;
+  /* background-image: linear-gradient(45deg, blue, purple, darkblue);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite; */
+}
+
+.back {
+  background-image: linear-gradient(45deg, blue, purple, darkblue, cyan,  darkblue, purple, blue);
+  background-size: 300% 300%;
+  animation: color 3s ease-in-out infinite;
+}
+
+@keyframes color{
+  0%{
+    background-position: 0 50%;
+  }
+
+  50%{
+    background-position: 100% 50%;
+  }
+
+  100%{
+    background-position: 0 50%;
+  }
+}
+
+.project-me {
+  float: left;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins;  
+  /* display: flex; */
+}
+
+.gallery-img {
+  height: 105px;
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  border-radius: 7px;
+
+} 
+
+.gallery-img:hover {
+  -webkit-transform: scale(1.08);
+  transform: scale(1.08);
+}
+
+.images {
+  margin: auto;
+    width: 22rem;
+    padding: 10px 15px;
+    height: 20rem; 
+
+}
+
+.name a{
+  text-decoration: none;
+  color: black;  
+  display: block;
+  font-size: 15px;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;   
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+.name a:hover{
+  border-bottom: 2px outset red;
+  transition-duration: 0.5s;
+  color: red;
+}
+
+.contact {
+  width: 100%;
+  padding: 30px 0px;
+  /* background-image: linear-gradient(45deg, blue, darkblue, purple);
+  background-size: 300% 300%;
+  animation: color 12s ease-in-out infinite; */
+  margin: auto;
+}  
+
+.bord-cntct { 
+  margin-right: 200px;
+  margin-left: 200px;
+  padding: 20px 20px;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 20px;
+  box-sizing: border-box;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+.kontak h2 {
+  text-align: center;
+}
+
+.quest {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: whitesmoke;
+  background-color: rgb(7, 194, 7);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: rgb(5, 175, 5)}
+
+.button:active {
+  background-color: rgb(5, 175, 5);
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+@media screen and (max-width: 500px) {
+
+}
+
+.button a{
+  color: whitesmoke;   
+  text-decoration: none;
+}
