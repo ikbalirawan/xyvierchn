@@ -203,7 +203,7 @@ section
 }
 
 .back {
-  background-image: linear-gradient(45deg, purple, black, purple);
+  background-image: linear-gradient(45deg, purple, purple, blue, cyan, blue, purple, purple);
   background-size: 300% 300%;
   animation: color 3s ease-in-out infinite;
 }
